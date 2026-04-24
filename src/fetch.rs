@@ -83,6 +83,7 @@ impl Client {
     }
 }
 
+#[allow(dead_code)]
 pub fn body_text(result: &FetchResult) -> String {
     String::from_utf8_lossy(&result.body).into_owned()
 }
