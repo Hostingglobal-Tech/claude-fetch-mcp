@@ -1,0 +1,19 @@
+# Mixed URL set for fetch benchmark
+# static docs
+https://doc.rust-lang.org/book/ch01-00-getting-started.html
+https://doc.rust-lang.org/std/collections/struct.HashMap.html
+# dynamic homepage
+https://www.rust-lang.org/
+https://example.com/
+# github raw
+https://raw.githubusercontent.com/rust-lang/rust/master/README.md
+# wikipedia
+https://en.wikipedia.org/wiki/Rust_(programming_language)
+# news
+https://news.ycombinator.com/
+# api-style JSON-ish
+https://api.github.com/repos/rust-lang/rust
+# docs.anthropic
+https://docs.claude.com/en/docs/claude-code/overview
+# tauri docs (MonoLex 관련)
+https://v2.tauri.app/

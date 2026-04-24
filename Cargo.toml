@@ -1,0 +1,35 @@
+[package]
+name = "claude-fetch-mcp"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "claude-fetch-mcp"
+path = "src/main.rs"
+
+[[bin]]
+name = "fetch-bench"
+path = "src/bin/bench.rs"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-std", "io-util", "sync", "fs"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "brotli", "http2", "stream"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+html2md = "0.2"
+sha2 = "0.10"
+hex = "0.4"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+url = "2"
